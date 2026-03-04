@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
 
 env:
-  VALKEY_VERSION: "9.0.2"
+  VALKEY_VERSION: "9.0.3"
 
 jobs:
   ############################################################################
@@ -24,13 +24,12 @@ jobs:
   ############################################################################
   build-rpm:
     name: RPM · ${{ matrix.platform.name }} (${{ matrix.arch }})
-    runs-on: ${{ matrix.arch == 'aarch64' && 'ubuntu-24.04-arm64' || 'ubuntu-latest' }}
+    runs-on: ${{ matrix.arch == 'aarch64' && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
 
     strategy:
       fail-fast: false
       matrix:
-        # arch: [x86_64, aarch64]
-        arch: [x86_64]
+        arch: [x86_64, aarch64]
         platform:
           # SUSE/openSUSE
           - name: "openSUSE Leap 15.5"
@@ -211,6 +210,7 @@ jobs:
                   gcc \
                   make \
                   jemalloc-devel \
+                  openssl \
                   openssl-devel \
                   pkgconfig \
                   procps-ng \
@@ -439,13 +439,12 @@ jobs:
   ############################################################################
   build-deb:
     name: DEB · ${{ matrix.platform.name }} (${{ matrix.arch }})
-    runs-on: ${{ matrix.arch == 'arm64' && 'ubuntu-24.04-arm64' || 'ubuntu-latest' }}
+    runs-on: ${{ matrix.arch == 'arm64' && 'ubuntu-24.04-arm' || 'ubuntu-latest' }}
 
     strategy:
       fail-fast: false
       matrix:
-        # arch: [amd64, arm64]
-        arch: [amd64]
+        arch: [amd64, arm64]
         platform:
           # Debian
           - name: "Debian 11 (Bullseye)"
@@ -730,7 +729,7 @@ jobs:
 
               echo "::group::Update changelog"
 
-              export DEB_VERSION="${VALKEY_VERSION}-1"
+              export DEB_VERSION="${VALKEY_VERSION}-1.${PLATFORM_CODENAME}"
 
               if ! grep -q "$DEB_VERSION" debian/changelog; then
                 echo "Updating changelog for ${PLATFORM_CODENAME}..."
