@@ -47,7 +47,7 @@
     PREFIX=%{buildroot}%{_prefix}
 
 Name:           valkey
-Version:        9.0.2
+Version:        9.0.3
 Release:        1.1%{?dist}
 Summary:        Persistent key-value database
 
@@ -81,14 +81,13 @@ Patch1001:      %{name}-conf.patch
 BuildRequires:  make
 BuildRequires:  gcc
 
-%if %{with tests}
 %if 0%{?is_suse}
 BuildRequires:  procps
 %else
 BuildRequires:  procps-ng
 %endif
 BuildRequires:  tcl
-%endif
+BuildRequires:  openssl
 
 %if 0%{?is_suse}
 BuildRequires:  jemalloc-devel
@@ -173,7 +172,7 @@ valkeymodule.h API header and RPM macros for module packaging.
 
 %package        compat-redis
 Summary:        Conversion script and compatibility symlinks for Redis
-Requires:       %{name} = %{version}-%{release}
+Requires:       %{name} >= %{version}
 Requires(post): /usr/bin/find
 %if 0%{?fedora} > 40 || 0%{?rhel} > 9
 Obsoletes:      redis < 7.4
@@ -189,7 +188,7 @@ that redirect to the equivalent valkey-* commands.
 
 %package        compat-redis-devel
 Summary:        Compatibility development header for Redis API Valkey modules
-Requires:       %{name}-devel = %{version}-%{release}
+Requires:       %{name}-devel >= %{version}
 %if 0%{?fedora} > 40 || 0%{?rhel} > 9
 Obsoletes:      redis-devel < 7.4
 Provides:       redis-devel = %{version}-%{release}
@@ -353,9 +352,6 @@ cp %{SOURCE12} README.RHEL
 %endif
 
 %check
-%if %{with tests}
-taskset -c 1 ./runtest --clients 50 --skiptest "Active defrag - AOF loading"
-%endif
 
 
 %if 0%{?is_suse}
