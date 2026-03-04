@@ -52,7 +52,7 @@ Release:        1.1%{?dist}
 Summary:        Persistent key-value database
 
 # valkey: BSD-3-Clause
-# libvalkey: BSD-3-Clause
+# hiredis: BSD-3-Clause
 # hdrhistogram, linenoise: BSD-2-Clause
 # lua: MIT
 # fpconv: BSL-1.0
@@ -127,7 +127,7 @@ Requires(pre):  shadow-utils
 %endif
 
 # Bundled dependencies
-Provides:       bundled(libvalkey) = 1.0.0
+Provides:       bundled(hiredis)
 Provides:       bundled(lua-libs) = 5.1.5
 Provides:       bundled(linenoise) = 1.0
 Provides:       bundled(hdr_histogram) = 0.11.8
@@ -222,7 +222,7 @@ Documentation and additional man pages for Valkey.
 %patch -P1001 -p1
 
 mv deps/lua/COPYRIGHT             COPYRIGHT-lua
-mv deps/libvalkey/COPYING         COPYING-libvalkey-BSD-3-Clause
+mv deps/hiredis/COPYING           COPYING-hiredis-BSD-3-Clause
 mv deps/hdr_histogram/LICENSE.txt LICENSE-hdrhistogram
 mv deps/hdr_histogram/COPYING.txt COPYING-hdrhistogram
 mv deps/fpconv/LICENSE.txt        LICENSE-fpconv
@@ -416,7 +416,7 @@ EOF
 %license LICENSE-hdrhistogram
 %license COPYING-hdrhistogram
 %license LICENSE-fpconv
-%license COPYING-libvalkey-BSD-3-Clause
+%license COPYING-hiredis-BSD-3-Clause
 %doc 00-RELEASENOTES README.md
 %if 0%{?is_suse}
 %doc README.SUSE
@@ -497,5 +497,5 @@ EOF
 %endif
 
 %changelog
-* Tue Mar 04 2026 Valkey Packaging Team <packaging@valkey.io> - 7.2.12-1.1
+* Wed Mar 04 2026 Evgeniy Patlan <evgeniy.patlan@percona.com> - 7.2.12-1.1
 - Package Valkey 7.2.12 for 7.2.x release line

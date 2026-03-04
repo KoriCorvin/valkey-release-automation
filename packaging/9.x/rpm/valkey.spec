@@ -135,6 +135,9 @@ Provides:       bundled(fpconv)
 
 Provides:       valkey(modules_abi)%{?_isa} = %{valkey_modules_abi}
 
+# Upgrade from older major versions
+Obsoletes:      valkey < 9.0
+
 ExcludeArch:    %{ix86}
 
 %description
@@ -165,6 +168,7 @@ You can use Valkey from most programming languages.
 %package        devel
 Summary:        Development header for Valkey module development
 Provides:       %{name}-static = %{version}-%{release}
+Obsoletes:      valkey-devel < 9.0
 
 %description    devel
 Header file required for building loadable Valkey modules. Includes the 
@@ -174,6 +178,7 @@ valkeymodule.h API header and RPM macros for module packaging.
 Summary:        Conversion script and compatibility symlinks for Redis
 Requires:       %{name} >= %{version}
 Requires(post): /usr/bin/find
+Obsoletes:      valkey-compat-redis < 9.0
 %if 0%{?fedora} > 40 || 0%{?rhel} > 9
 Obsoletes:      redis < 7.4
 Provides:       redis = %{version}-%{release}
@@ -189,6 +194,7 @@ that redirect to the equivalent valkey-* commands.
 %package        compat-redis-devel
 Summary:        Compatibility development header for Redis API Valkey modules
 Requires:       %{name}-devel >= %{version}
+Obsoletes:      valkey-compat-redis-devel < 9.0
 %if 0%{?fedora} > 40 || 0%{?rhel} > 9
 Obsoletes:      redis-devel < 7.4
 Provides:       redis-devel = %{version}-%{release}
@@ -207,6 +213,7 @@ Redis API.
 %package        doc
 Summary:        Documentation and extra man pages for %{name}
 License:        CC-BY-SA-4.0
+Obsoletes:      valkey-doc < 9.0
 %if 0%{?fedora} > 40 || 0%{?rhel} > 9
 Obsoletes:      redis-doc < 7.4
 Provides:       redis-doc = %{version}-%{release}

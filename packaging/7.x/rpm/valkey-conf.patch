@@ -29,38 +29,38 @@ Index: valkey-7.2.12/valkey.conf
 ===================================================================
 --- valkey-7.2.12.orig/valkey.conf
 +++ valkey-7.2.12/valkey.conf
-@@ -395,7 +395,7 @@ daemonize no
+@@ -321,7 +321,7 @@ daemonize no
  # The default is "no". To run under upstart/systemd, you can simply uncomment
  # the line below:
  #
 -# supervised auto
 +supervised systemd
- 
+
  # If a pid file is specified, the server writes it where specified at startup
  # and removes it at exit.
-@@ -409,7 +409,7 @@ daemonize no
+@@ -335,7 +335,7 @@ daemonize no
  #
  # Note that on modern Linux systems "/run/valkey.pid" is more conforming
  # and should be used instead.
 -pidfile /var/run/valkey_6379.pid
 +pidfile /run/valkey/default.pid
- 
+
  # Specify the server verbosity level.
  # This can be one of:
-@@ -440,7 +440,8 @@ loglevel notice
+@@ -349,7 +349,8 @@ loglevel notice
  # Specify the log file name. Also the empty string can be used to force
  # the server to log on the standard output. Note that if you use standard
  # output for logging but daemonize, logs will be sent to /dev/null
 -logfile ""
 +# logfile ""
 +logfile /var/log/valkey/default.log
- 
+
  # To enable logging to the system logger, just set 'syslog-enabled' to yes,
  # and optionally update the other syslog parameters to suit your needs.
-@@ -631,7 +632,7 @@ rdb-del-sync-files no
- # Note that modifying 'dir' during runtime may have unexpected behavior,
- # for example when a child process is running, related file operations may
- # have unexpected effects.
+@@ -504,7 +505,7 @@
+ # The Append Only File will also be created inside this directory.
+ #
+ # Note that you must specify a directory here, not a file name.
 -dir ./
 +dir /var/lib/valkey/default/
  

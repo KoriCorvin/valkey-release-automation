@@ -10,6 +10,8 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=+lto
 export DEB_CFLAGS_MAINT_APPEND = -I/usr/include/liblzf
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,-no-as-needed -ldl -latomic -llzf
 
+# No valkey-doc release exists for 7.x (earliest is 8.0.0)
+# VALKEY_DOC_VERSION is unused but kept for consistency
 VALKEY_DOC_VERSION = 7.2.0
 
 # Build jemalloc in parallel
@@ -35,9 +37,11 @@ ifeq (,$(filter nodoc,$(DEB_BUILD_PROFILES)))
 	# Download and build valkey-doc if not present
 	if [ ! -d valkey-doc-$(VALKEY_DOC_VERSION) ]; then \
 		if [ ! -f valkey-doc-$(VALKEY_DOC_VERSION).tar.gz ]; then \
-			wget -q https://github.com/valkey-io/valkey-doc/archive/$(VALKEY_DOC_VERSION)/valkey-doc-$(VALKEY_DOC_VERSION).tar.gz; \
+			wget -q https://github.com/valkey-io/valkey-doc/archive/$(VALKEY_DOC_VERSION)/valkey-doc-$(VALKEY_DOC_VERSION).tar.gz || true; \
 		fi; \
-		tar xzf valkey-doc-$(VALKEY_DOC_VERSION).tar.gz; \
+		if [ -f valkey-doc-$(VALKEY_DOC_VERSION).tar.gz ]; then \
+			tar xzf valkey-doc-$(VALKEY_DOC_VERSION).tar.gz; \
+		fi; \
 	fi
 	if [ -d valkey-doc-$(VALKEY_DOC_VERSION) ]; then \
 		$(MAKE) -C valkey-doc-$(VALKEY_DOC_VERSION) VALKEY_ROOT=$(CURDIR) || true; \

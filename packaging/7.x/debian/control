@@ -38,7 +38,6 @@ Depends:
 Recommends:
  logrotate
 Suggests:
- valkey-doc,
  valkey-compat-redis
 Description: Persistent key-value database with network interface
  Valkey is an advanced key-value store. It is often referred to as a data
@@ -144,15 +143,3 @@ Description: Redis API compatibility headers for Valkey modules
  Valkey modules with the Redis API.
  .
  This is a transitional package to help migrate Redis modules to Valkey.
-
-Package: valkey-doc
-Section: doc
-Architecture: all
-Multi-Arch: foreign
-Depends:
- ${misc:Depends}
-Build-Profiles: <!nodoc>
-Description: Documentation for Valkey
- Valkey is an advanced key-value store.
- .
- This package contains the documentation and additional man pages.

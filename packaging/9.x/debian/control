@@ -35,6 +35,10 @@ Depends:
  lsb-base (>= 3.2-14),
  ${misc:Depends},
  ${shlibs:Depends}
+Replaces:
+ valkey-server (<< 9.0~)
+Breaks:
+ valkey-server (<< 9.0~)
 Recommends:
  logrotate
 Suggests:
@@ -72,6 +76,10 @@ Depends:
  lsb-base (>= 3.2-14),
  ${misc:Depends},
  ${shlibs:Depends}
+Replaces:
+ valkey-sentinel (<< 9.0~)
+Breaks:
+ valkey-sentinel (<< 9.0~)
 Recommends:
  logrotate
 Description: Persistent key-value database with network interface (monitoring)
@@ -85,6 +93,10 @@ Depends:
  adduser,
  ${misc:Depends},
  ${shlibs:Depends}
+Replaces:
+ valkey-tools (<< 9.0~)
+Breaks:
+ valkey-tools (<< 9.0~)
 Suggests:
  ruby-redis
 Description: Persistent key-value database with network interface (client)
@@ -98,6 +110,10 @@ Architecture: any
 Multi-Arch: same
 Depends:
  ${misc:Depends}
+Replaces:
+ valkey-dev (<< 9.0~)
+Breaks:
+ valkey-dev (<< 9.0~)
 Description: Development files for Valkey modules
  Valkey is an advanced key-value store.
  .
@@ -110,15 +126,18 @@ Depends:
  valkey-server (>= ${source:Version}),
  valkey-tools (>= ${source:Version}),
  ${misc:Depends}
+Replaces:
+ valkey-compat-redis (<< 9.0~),
+ redis-server (<< 7.4~),
+ redis-tools (<< 7.4~)
+Breaks:
+ valkey-compat-redis (<< 9.0~)
 Conflicts:
  redis-server (<< 7.4~),
  redis-tools (<< 7.4~)
 Provides:
  redis-server,
  redis-tools
-Replaces:
- redis-server (<< 7.4~),
- redis-tools (<< 7.4~)
 Description: Redis compatibility symlinks for Valkey
  This package provides compatibility symlinks and wrappers to enable
  easy conversion from Redis to Valkey. It provides redis-* command names
@@ -133,12 +152,15 @@ Multi-Arch: foreign
 Depends:
  valkey-dev (>= ${source:Version}),
  ${misc:Depends}
+Replaces:
+ valkey-compat-redis-dev (<< 9.0~),
+ redis-dev (<< 7.4~)
+Breaks:
+ valkey-compat-redis-dev (<< 9.0~)
 Conflicts:
  redis-dev (<< 7.4~)
 Provides:
  redis-dev
-Replaces:
- redis-dev (<< 7.4~)
 Description: Redis API compatibility headers for Valkey modules
  This package provides the legacy redismodule.h header for building
  Valkey modules with the Redis API.
@@ -151,6 +173,10 @@ Architecture: all
 Multi-Arch: foreign
 Depends:
  ${misc:Depends}
+Replaces:
+ valkey-doc (<< 9.0~)
+Breaks:
+ valkey-doc (<< 9.0~)
 Build-Profiles: <!nodoc>
 Description: Documentation for Valkey
  Valkey is an advanced key-value store.
