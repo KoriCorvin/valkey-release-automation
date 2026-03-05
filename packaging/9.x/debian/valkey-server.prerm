@@ -1,7 +1,0 @@
-#!/bin/sh
-
-set -eu
-
-#DEBHELPER#
-
-exit 0
