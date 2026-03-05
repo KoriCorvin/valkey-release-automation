@@ -1,11 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
-# Stop valkey services before package removal
-systemctl stop valkey.service
-systemctl disable valkey.service
+#DEBHELPER#
 
-systemctl enable valkey-sentinel.service
-systemctl start valkey-sentinel.service
 exit 0
-
