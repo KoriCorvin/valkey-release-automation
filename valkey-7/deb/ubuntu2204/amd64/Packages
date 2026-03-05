@@ -9,10 +9,10 @@ Conflicts: redis-server (<< 7.4~), redis-tools (<< 7.4~)
 Replaces: redis-server (<< 7.4~), redis-tools (<< 7.4~)
 Provides: redis-server, redis-tools
 Filename: ./valkey-compat-redis_7.2.12-1.jammy_all.deb
-Size: 11352
-MD5sum: 733154e72633c20f78f4be2e3328ddbd
-SHA1: 5ce5495b721036af59a2aeefc86d66b1ae706179
-SHA256: 871add6f56fba0168155508e7b81b105e3a060da89acbe298a876d7889c1b4f6
+Size: 11340
+MD5sum: 5829099d011f192ce3244729dbcd5331
+SHA1: 39f8052a03709af3c420190e65ab947833661f79
+SHA256: 42124eee45d9fe11c687b6921e2fe1b9d737d0ba473a940197b5f5d593e7f352
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -34,10 +34,10 @@ Conflicts: redis-dev (<< 7.4~)
 Replaces: redis-dev (<< 7.4~)
 Provides: redis-dev
 Filename: ./valkey-compat-redis-dev_7.2.12-1.jammy_all.deb
-Size: 17168
-MD5sum: 811830a38e922bd8f104cdb668f8e9c7
-SHA1: f89d1b0d68588d56f55d78e96b51f5f5d2b814e3
-SHA256: 529bb49f7f9d27676597da071984ebe2f1384747a6cfe86cdb71a9cfc544a2e8
+Size: 17160
+MD5sum: b2a00cc748e06f7b769e9c6d73b9fe82
+SHA1: d88e188be0e0b71d15d780368ccb344050673ccf
+SHA256: 47352eaf7e20c2ee7af13838242f65637136c5af90ceddf95ccdf5f6a550077d
 Section: libdevel
 Priority: optional
 Multi-Arch: foreign
@@ -55,10 +55,10 @@ Architecture: amd64
 Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
 Installed-Size: 132
 Filename: ./valkey-dev_7.2.12-1.jammy_amd64.deb
-Size: 26076
-MD5sum: 27389bad7f5f30eceeb61a7cef3c489b
-SHA1: 6b580f175a7f8480612a56a0405574347bac92d8
-SHA256: bfddd6d1b74dfc704bce3a3770442548455563acc4e2d85659e1e8263d56db86
+Size: 26084
+MD5sum: 1df51857b712bc42fb3ba22caaa5f411
+SHA1: cce37013b1c5638aa94c27b11280616d026263ae
+SHA256: 90e3bf553bb77ab209e36568bd1628b636010ae3d9cb835e3b32c7e25c7c3957
 Section: libdevel
 Priority: optional
 Multi-Arch: same
@@ -78,10 +78,10 @@ Installed-Size: 65
 Depends: valkey-tools (= 7.2.12-1.jammy), lsb-base (>= 3.2-14)
 Recommends: logrotate
 Filename: ./valkey-sentinel_7.2.12-1.jammy_amd64.deb
-Size: 18172
-MD5sum: 7c8ec2202275205d4e96cf794f4d50c4
-SHA1: da8d39ea6277dba2fc4abb2a74b4e0fca285906b
-SHA256: 3f9bfe80dda7efead6c243ae15363ef6c9b3e3f02e51bc8ea491d84eda120dad
+Size: 18164
+MD5sum: e30c94b80e273f49c9bfe54d70a2d955
+SHA1: 22f5cd9adabf8130243b7555213ec891e3d67168
+SHA256: 51cc95b7ecea2b6673fbcd2c5a3d726979cafcb3f74b7453abc45d264b612ec5
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -102,10 +102,10 @@ Recommends: logrotate
 Suggests: valkey-compat-redis
 Provides: valkey
 Filename: ./valkey-server_7.2.12-1.jammy_amd64.deb
-Size: 951100
-MD5sum: 29345c711b82e51237f2bffbd066f305
-SHA1: f110dc22b220c40425045e9167f98d2f750d1f2a
-SHA256: 9eee92cf62d4123a2371fc9893728f30ff5d67f51b217fda5b70e41e8e02ba80
+Size: 950992
+MD5sum: af2d104d2ced1fb9ef7158e914855148
+SHA1: 170e50281e8bb476ea7ceea622f75e544cd6f5a8
+SHA256: 73c1d0007042cfaaf5d2bb28ee8638e4c82a0545c25088c2aa3110582237c16e
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -141,10 +141,10 @@ Installed-Size: 1407
 Depends: adduser, libatomic1 (>= 4.8), libc6 (>= 2.34), libjemalloc2 (>= 2.1.1), liblzf1 (>= 1.5), libssl3 (>= 3.0.0~~alpha1), libsystemd0
 Suggests: ruby-redis
 Filename: ./valkey-tools_7.2.12-1.jammy_amd64.deb
-Size: 296472
-MD5sum: 6a0559af6b5906e53d7c54fea4f20854
-SHA1: 31fc6aede7310de8221c76b54810b01414c93543
-SHA256: d47ccba070be43a5c449f6559e882da4aa620d94b999e7309e57f3a154baaedc
+Size: 295164
+MD5sum: 3c221947148711ce7ee3d7bf1cbc48a4
+SHA1: 54750ba4e9d4e6c1e95401b4ac14bd482b156294
+SHA256: 025c9fa4aa0344bd570976ac5dc02fe7bb93deb1e25671d5ec94d329f4b76329
 Section: database
 Priority: optional
 Homepage: https://valkey.io

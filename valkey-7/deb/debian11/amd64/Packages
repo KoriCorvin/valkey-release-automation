@@ -9,10 +9,10 @@ Conflicts: redis-server (<< 7.4~), redis-tools (<< 7.4~)
 Replaces: redis-server (<< 7.4~), redis-tools (<< 7.4~)
 Provides: redis-server, redis-tools
 Filename: ./valkey-compat-redis_7.2.12-1.bullseye_all.deb
-Size: 11340
-MD5sum: defec2a0c8d294f69c931af5e01ba3f4
-SHA1: 04b420decb86ba54deead88a38ef0620290460d2
-SHA256: e567afa262257c7516609176fbd98de004d154068a6ef5f98a9731fd30a52608
+Size: 11344
+MD5sum: f87ba2510049a87b7ccb312911a7534d
+SHA1: 5918d682950e0b30f3a480763eb65fc12c85d3c8
+SHA256: 93dee8fd22ea2793e5dcc86cce87d1ef59578590fb9d075b1aba0ce44633f551
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -34,10 +34,10 @@ Conflicts: redis-dev (<< 7.4~)
 Replaces: redis-dev (<< 7.4~)
 Provides: redis-dev
 Filename: ./valkey-compat-redis-dev_7.2.12-1.bullseye_all.deb
-Size: 17176
-MD5sum: 13783a66368420766f47e22180cac5f7
-SHA1: 4d5e0467964e5baaa23352bb89f7eed9cb3fbb36
-SHA256: 7959bc6bb7d5899e0bc6c4d783057437691d8a4c3d6cda48e15eb743851fda4d
+Size: 17184
+MD5sum: 5e0eae7404788efd83cfe6a3a8f6b234
+SHA1: adf7d8cdc55f30e1ca1e82ea529adabfb416017f
+SHA256: cd9fa2ee4c1e2d2d6e350234362b46615b1ece413c745869fdc7993c46738792
 Section: libdevel
 Priority: optional
 Multi-Arch: foreign
@@ -55,10 +55,10 @@ Architecture: amd64
 Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
 Installed-Size: 132
 Filename: ./valkey-dev_7.2.12-1.bullseye_amd64.deb
-Size: 26068
-MD5sum: fe33ac27ed8f74e01063cdbf033a6fbe
-SHA1: da33863b9fdf74f360c7c315fba45bda08ad1029
-SHA256: 988c0caf1b3c05f631c6ecc573b88663fedf6eabbf3d5051d9fc912a2bddc9ec
+Size: 26084
+MD5sum: e5cc75c57dd8f2856ff77a9435d199e7
+SHA1: 7d5130845d692849d869c2caf48cc92ea765e534
+SHA256: 8647e066cd0f34224a4961693124b78ded0414197b84d179c17f582952d0e0b7
 Section: libdevel
 Priority: optional
 Multi-Arch: same
@@ -78,10 +78,10 @@ Installed-Size: 65
 Depends: valkey-tools (= 7.2.12-1.bullseye), lsb-base (>= 3.2-14)
 Recommends: logrotate
 Filename: ./valkey-sentinel_7.2.12-1.bullseye_amd64.deb
-Size: 18152
-MD5sum: 2f1f6006f5f9318f5a2d8e0aa2ce6baf
-SHA1: 2917917f783dae2f25bf700ba0f8716a98bf370f
-SHA256: ec795c45d5a66d2a58429c676b5f09025d8cbf46189381673e897368d6d4f5c8
+Size: 18148
+MD5sum: ac6cb1bf0b0da867b8fc950bafb9d0d3
+SHA1: 7dfb4dd36fd01ea289d63f2b783d2ca6f2aba7be
+SHA256: 7f59826e723fb923c255e166c341a396da8ac4b9b6ec584f4625f62a4c7ad365
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -102,10 +102,10 @@ Recommends: logrotate
 Suggests: valkey-compat-redis
 Provides: valkey
 Filename: ./valkey-server_7.2.12-1.bullseye_amd64.deb
-Size: 932276
-MD5sum: 9eb97d2793e503b163a80e3632cfdfac
-SHA1: b88660c14ff29fd8dd52072295d08de829cb06dc
-SHA256: 6107c75e10f62ac3d38d7dd62cad482a5ec73043e6eda1f614906fd6c85a0561
+Size: 931868
+MD5sum: ca0f18f4cfd6d425158f3f8328a77020
+SHA1: e27576eff681b187c30cf48bb1a4129dadc8bfbd
+SHA256: f049e59efe09c259f57d757ffe7c6976ccb7f35fcca16fa4b42f252f4e8c5a5e
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -141,14 +141,14 @@ Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
 Installed-Size: 3299
 Depends: valkey-server (= 7.2.12-1.bullseye)
 Filename: ./valkey-server-dbgsym_7.2.12-1.bullseye_amd64.deb
-Size: 2982944
-MD5sum: dc267e125e2e0d5879ffac466f4d1903
-SHA1: 42813e82376fd765f4543c87e4d5b44e74456953
-SHA256: e959566c1bf112170c389b22e386e811be4d14c351683d12929f4c806500a1a0
+Size: 2982532
+MD5sum: 4b4ed9239e31886c4d3c41b63373d0ea
+SHA1: cd8c98615daa7d2a0be7760eeb21ffc64271b8fd
+SHA256: e0013c11cd7920af5638bbb3dd2b30194054c52ec3fed080804b0a9b8b5f3726
 Section: debug
 Priority: optional
 Description: debug symbols for valkey-server
-Build-Ids: 0d5590bc2042557f6353c6a50852be9ff329f659
+Build-Ids: b270dd5a67bf10729880002e3df461aa928b5655
 
 Package: valkey-tools
 Source: valkey
@@ -159,10 +159,10 @@ Installed-Size: 1387
 Depends: adduser, libatomic1 (>= 4.8), libc6 (>= 2.29), libjemalloc2 (>= 2.1.1), liblzf1 (>= 1.5), libssl1.1 (>= 1.1.1), libsystemd0
 Suggests: ruby-redis
 Filename: ./valkey-tools_7.2.12-1.bullseye_amd64.deb
-Size: 288184
-MD5sum: 12acdb5e27e968f9461ac4bdec1efa4c
-SHA1: a30ac9f53326962458178a1b326854acaeaad2ac
-SHA256: 27c41f8b3c865c7926e887207aac33865768769c2d1b26d580ec3544ede40dd1
+Size: 289112
+MD5sum: 9844893c4614ca7e7ead6bad3dec0f3b
+SHA1: 919823b2aedf5894729146dfa33a871e0154076a
+SHA256: 231a7da37822e98e5077c0112d760e4044b3fd323745f467e76e4d0d1d1135d3
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -181,11 +181,11 @@ Installed-Size: 803
 Depends: valkey-tools (= 7.2.12-1.bullseye)
 Filename: ./valkey-tools-dbgsym_7.2.12-1.bullseye_amd64.deb
 Size: 688068
-MD5sum: 87678b02787699f764e5e8a0b3afc77b
-SHA1: 8429344f5970c6a8ce145651728d764a80ea5b15
-SHA256: b169e03b8f7f550e478b0e5ffd74927b283223735618e0c0d7e70738ef5d257e
+MD5sum: 0751e2137bbf6abfc6322d6d98499314
+SHA1: 7631fd3b6ed5a8c19dba8e15f54bed593858ef6c
+SHA256: e7fbcd98631ecde8c9d08adc67368e98e676d8dc570daa35ab48e4fc2c7b1b89
 Section: debug
 Priority: optional
 Description: debug symbols for valkey-tools
-Build-Ids: 1cf621d6c0396240f1d76a0a03cb99a2bb793e49 2a2d5ccfc3e0b46270a807b9b4739bfff576c407
+Build-Ids: 6226b2eb5a011eceec56aeb949d5a3bf939d8a65 794cc799886dc2b253e5e96d9c35c6cfb812fdf3
 

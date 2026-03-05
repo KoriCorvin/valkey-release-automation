@@ -10,9 +10,9 @@ Replaces: redis-server (<< 7.4~), redis-tools (<< 7.4~)
 Provides: redis-server, redis-tools
 Filename: ./valkey-compat-redis_7.2.12-1.noble_all.deb
 Size: 11340
-MD5sum: ddae0e38c0e7384f63decf3e070fc5b2
-SHA1: 578aa845fcd7152b44f2e0f25318d6378f3ff851
-SHA256: 244e33824e536dc1a2a7277855e839a206529975ca0368b9b49208a895af0b8a
+MD5sum: 9d9c192704f3ae7969550fc323912e51
+SHA1: ade5dafb25c74f754b3ceb96a1d13d805b08b46e
+SHA256: 71644c8a9a05cb114a3db41dabe719a686b7d6d04b9e5329a27dc5742160a7db
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -34,10 +34,10 @@ Conflicts: redis-dev (<< 7.4~)
 Replaces: redis-dev (<< 7.4~)
 Provides: redis-dev
 Filename: ./valkey-compat-redis-dev_7.2.12-1.noble_all.deb
-Size: 17172
-MD5sum: 4f2111c843355c3b57c7fce15a4075ee
-SHA1: 9ce1998def49585bace4aba892f728f88ad17be9
-SHA256: 7d566915eb90a9d8484cca8f30e1896da4be669c3688ef3b43f181f037f9c880
+Size: 17164
+MD5sum: a1e90def658cb1ee6f0c11b9b58406a9
+SHA1: 0fe65518c9607afa6db964973a862815db599291
+SHA256: eaed15c15ab0b3b06346ec6a6ddd628e9c6192fb1745a9bb9b2b5cb80d6af14d
 Section: libdevel
 Priority: optional
 Multi-Arch: foreign
@@ -55,10 +55,10 @@ Architecture: amd64
 Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
 Installed-Size: 132
 Filename: ./valkey-dev_7.2.12-1.noble_amd64.deb
-Size: 26084
-MD5sum: 5c2f8a64e842b2f91bae031d64863d3f
-SHA1: 5b7d920b8dead768495e94d3a7da7cf7cf35ac2d
-SHA256: 08ed8848cc36eb1b3f5ab43a5dacdcca689552ab63bf0430932558759921ea68
+Size: 26080
+MD5sum: 99828b38be3e131e339252d260c4c075
+SHA1: c258cb61e814e78a9006d56bfda4032798ff43d1
+SHA256: 23350ecb9b45deb60d5b2b1ae084727652e3680315a65c7c2d88b5322e309cec
 Section: libdevel
 Priority: optional
 Multi-Arch: same
@@ -78,10 +78,10 @@ Installed-Size: 65
 Depends: valkey-tools (= 7.2.12-1.noble), lsb-base (>= 3.2-14)
 Recommends: logrotate
 Filename: ./valkey-sentinel_7.2.12-1.noble_amd64.deb
-Size: 18148
-MD5sum: 89674fbbf2be2f3707edaee0342335d3
-SHA1: 480a613f7a7857bd8fc626c04936f5ea727761a6
-SHA256: 9ea564f6bd256cd05bfa46c86afdc03de60518d6d7b44b27a3a201ff9e5e9c78
+Size: 18156
+MD5sum: 253e20aef3d5978178fbe3828a3245be
+SHA1: 313562464391a9a688411e6d9758c64e3d189347
+SHA256: 594a055f0d6a1177c8a9d08931b47d91bc6edd7a019c410b349b34ade64de67b
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -102,10 +102,10 @@ Recommends: logrotate
 Suggests: valkey-compat-redis
 Provides: valkey
 Filename: ./valkey-server_7.2.12-1.noble_amd64.deb
-Size: 954148
-MD5sum: 6dcc95a14869bcc705a046e2081dc3a1
-SHA1: 676322a1bcab8302ebc87199b7b7ada340bcbb6a
-SHA256: f5c6b9f9e973adb549b7e8f9ac3e17326c3cef22312262d9ff985513e6d17cbd
+Size: 954140
+MD5sum: 316c3c066ab562b939aacea3df13c54a
+SHA1: c3ad17501b8832190d8a50276899563525e23bab
+SHA256: b27fa66eb34598da2b8572e1c2b04ead5d13948ddb9f2727c80622acf1819641
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -141,10 +141,10 @@ Installed-Size: 1407
 Depends: adduser, libatomic1 (>= 4.8), libc6 (>= 2.38), libjemalloc2 (>= 2.1.1), liblzf1 (>= 1.5), libssl3t64 (>= 3.0.0), libsystemd0
 Suggests: ruby-redis
 Filename: ./valkey-tools_7.2.12-1.noble_amd64.deb
-Size: 292656
-MD5sum: a5d72a79959431a8a2b2eb465d4d09cf
-SHA1: 24c41f95ebf165a25773bd8b4c2720f303ac1d91
-SHA256: 15fbeee6b90916f20ef348faf9b991c992589b5753c70c2d43bab2914491b9ed
+Size: 297160
+MD5sum: b80bddf02855e985ae08a4ffe4a1ccaa
+SHA1: b32bc6b0a3cfe553fea9a36c6438ea71203e7201
+SHA256: 2a54647a6cba932fe4fb7f0ccda37add80651217b00791db3a84f52938237fdd
 Section: database
 Priority: optional
 Homepage: https://valkey.io

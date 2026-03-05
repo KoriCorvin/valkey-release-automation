@@ -10,9 +10,9 @@ Replaces: redis-server (<< 7.4~), redis-tools (<< 7.4~)
 Provides: redis-server, redis-tools
 Filename: ./valkey-compat-redis_7.2.12-1.bookworm_all.deb
 Size: 11348
-MD5sum: d79dd91b0f9cf170b6315c82059bfb0e
-SHA1: f69817d519165fd7f3f630dc1d3dab7f2efd9091
-SHA256: c41a77c3db2b24a2b0923ff707677f90e9a4232b8793ce8c78f6df0f32c9b15c
+MD5sum: 05ea27a6d5c8b629a09e245b80722389
+SHA1: 56484ba7ee89454d181b24b6677700d66e930103
+SHA256: ac55cbfdb5b263a73585ed842b431a719f55c208bed816e949c2b607bd5169f3
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -34,10 +34,10 @@ Conflicts: redis-dev (<< 7.4~)
 Replaces: redis-dev (<< 7.4~)
 Provides: redis-dev
 Filename: ./valkey-compat-redis-dev_7.2.12-1.bookworm_all.deb
-Size: 17172
-MD5sum: 4129503cf02868680e732d77202ad864
-SHA1: 52a96c90a1a9f1e0117d5b1a5939e25cccbe05d2
-SHA256: 46da7a43bef3749bf0dca509f56c0159d408261db04ce79da323b4a914df97e8
+Size: 17180
+MD5sum: 6ca35bcd541b41b2c8df3282ebd99d01
+SHA1: 210d237eb2f2a6e3f4e66bdcbd6bf26f2b9f90e2
+SHA256: ebd179b5d5e2e3e22390748534d2e36ead8eea7d2e245bd56ca654fe1a90fe15
 Section: libdevel
 Priority: optional
 Multi-Arch: foreign
@@ -55,10 +55,10 @@ Architecture: arm64
 Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
 Installed-Size: 132
 Filename: ./valkey-dev_7.2.12-1.bookworm_arm64.deb
-Size: 26080
-MD5sum: 81ba3ee0278730d1162bb66a997e63f0
-SHA1: d7e9412f6f1197d0c7c54c15c96bd5edcf8c2f14
-SHA256: 41d0387a1c07802d3ba9775092f30e37aa0b32be8ebb84c52047fe0f4e7f4320
+Size: 26084
+MD5sum: 6832caa531a075b86d159fea22291581
+SHA1: da13ccea129b121d6f77b09bbb21b865dc810e32
+SHA256: 78f536105d66505b8ef69ffc415186d6e5f3240c7d06c908cdaa58362ecef89d
 Section: libdevel
 Priority: optional
 Multi-Arch: same
@@ -78,10 +78,10 @@ Installed-Size: 65
 Depends: valkey-tools (= 7.2.12-1.bookworm), lsb-base (>= 3.2-14)
 Recommends: logrotate
 Filename: ./valkey-sentinel_7.2.12-1.bookworm_arm64.deb
-Size: 18156
-MD5sum: 51244b65615306dad0367859f7b1dffd
-SHA1: bc8acbc4b9131af5a5180eb0e57a769a615448d2
-SHA256: fca11d3b83d7e03a755f2d7dd7faeccd75c934dc82e74ae891c1538934c488e3
+Size: 18172
+MD5sum: dc1386362ce42a72e0472b9aeb70c8f7
+SHA1: e120f512348c8df1e68e28693889d8eabc00069d
+SHA256: e7aba9ba64945e529d9e9a2a313509897d465b2c70f9ee14e9727d397b1b7a9c
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -102,10 +102,10 @@ Recommends: logrotate
 Suggests: valkey-compat-redis
 Provides: valkey
 Filename: ./valkey-server_7.2.12-1.bookworm_arm64.deb
-Size: 884776
-MD5sum: 2ae72429df9ec60ce53903a7bf0a723d
-SHA1: 9cf8478fc9cdff942f22c24046bf16432396f470
-SHA256: be9e5cf6283b3346f82a38781762f7be1ee9ddc3f17d988eb4beaf763f77b6fc
+Size: 884672
+MD5sum: 4018740b1647cd8817fe3b8cbc73a5f3
+SHA1: 1d4fb6010f4091dfc832f5aa7e9cbdc49684d10a
+SHA256: 0e55a1aa0aec8546561f8dc1a2d261c2f316ae217dca05c7a1d9e0838d6137d5
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -141,14 +141,14 @@ Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
 Installed-Size: 3574
 Depends: valkey-server (= 7.2.12-1.bookworm)
 Filename: ./valkey-server-dbgsym_7.2.12-1.bookworm_arm64.deb
-Size: 3160256
-MD5sum: 0cdbcb0d93528aa60a173746de57a239
-SHA1: 612ecccf6a25c1e9517cc007836ab8cb0a267a5d
-SHA256: 3ad28aa21c483e6fa9bc01a29ed94480370e258e74dca493495b006b2b81f84c
+Size: 3160224
+MD5sum: a19c0ff97368792eaa449c4e62a5fce5
+SHA1: bb9174d8db3fb6b832f6fe7b598bc7f99780db64
+SHA256: 29077abb2db969e0fd891185a6520edfa1db372b46b2d06c2aa8623708cf8933
 Section: debug
 Priority: optional
 Description: debug symbols for valkey-server
-Build-Ids: ef9be2f3d5daa938e3d6caac8848a322380420ac
+Build-Ids: b5493a034090bc76aee28c74e179a6a2ab99cffd
 
 Package: valkey-tools
 Source: valkey
@@ -159,10 +159,10 @@ Installed-Size: 1568
 Depends: adduser, libatomic1 (>= 4.8), libc6 (>= 2.34), libjemalloc2 (>= 2.1.1), liblzf1 (>= 1.5), libssl3 (>= 3.0.0), libsystemd0
 Suggests: ruby-redis
 Filename: ./valkey-tools_7.2.12-1.bookworm_arm64.deb
-Size: 252320
-MD5sum: 5219c25f729bf42e5dd9732b4f347384
-SHA1: 9dee309a29b053c330b06fb9cc78e6b77d5c2722
-SHA256: e362fa27d3822429e1c367526ea445e52fd18149813af3e1acd8cb0e23b2741a
+Size: 252068
+MD5sum: 15a452b3fb592afd93c58379c41db5c5
+SHA1: 5f4f84d40428a455b7a9d3501271d2efea3b98fa
+SHA256: 5b449ddde9050fc292f2c803ed23f488fdc336e94a5089647ae5b5735a5c707a
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -180,12 +180,12 @@ Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
 Installed-Size: 928
 Depends: valkey-tools (= 7.2.12-1.bookworm)
 Filename: ./valkey-tools-dbgsym_7.2.12-1.bookworm_arm64.deb
-Size: 765872
-MD5sum: 8e95f94458ca3ec95d166cfd9baaa9cb
-SHA1: b20ea1e073e940fac207117159ed72d8063fb552
-SHA256: ca4ac7bd6967d5312a747ba93759e7b491080f9e592fe767216967c688b2c422
+Size: 765876
+MD5sum: 33281ab3ed71566592ed58e92531f66e
+SHA1: 70dabb7d6f4f55e4be8e038e0290551e0e028366
+SHA256: 09179c9c2aacb486ef4fb0e8750665d1538a456907a3a7ad8bc0d8c718780112
 Section: debug
 Priority: optional
 Description: debug symbols for valkey-tools
-Build-Ids: 71f5888a5b1892a2b66c14ce955976f0469baf02 d94dba2f17fbab9d5e199318fb2631d6c3ded8a2
+Build-Ids: 47ef306cca621c3880116b67756f311949481162 748bc435a9ec1995224ae4a5606f239c0dd56aa3
 
