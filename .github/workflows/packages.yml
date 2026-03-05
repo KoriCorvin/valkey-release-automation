@@ -1237,8 +1237,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create site directory
-        run: mkdir -p site
+      - name: Checkout existing gh-pages content
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: site
+        continue-on-error: true
+
+      - name: Clean up site directory
+        run: |
+          mkdir -p site
+          cd site
+          # Remove non-Pages files (from bad orphan branch init)
+          rm -rf .git packaging scripts documents .github
+          rm -f README.md PACKAGING.md LICENSE
 
       - name: Download all build artifacts
         uses: actions/download-artifact@v4
