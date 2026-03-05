@@ -10,10 +10,10 @@ Breaks: valkey-compat-redis (<< 8.0~)
 Replaces: redis-server (<< 7.4~), redis-tools (<< 7.4~), valkey-compat-redis (<< 8.0~)
 Provides: redis-server, redis-tools
 Filename: ./valkey-compat-redis_8.1.6-1.trixie_all.deb
-Size: 14308
-MD5sum: 7bf1c5b606d941d8143f504be549aac7
-SHA1: 0d68bf5af436a62e9696429c28c7cc166b136e73
-SHA256: e0631b8b908da7636e91a0ff1fc6bad7e867892e10fbe3518ce63db5d431d3ee
+Size: 14316
+MD5sum: cb83666b3fe1ef4085d1b2c3546ba107
+SHA1: 2f9ce51509a08a01870995176334083a8d777a5a
+SHA256: bbea853a0699d5d91425952d8b783bb65a38a03169deac859497ecba5f2f6c75
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -36,10 +36,10 @@ Breaks: valkey-compat-redis-dev (<< 8.0~)
 Replaces: redis-dev (<< 7.4~), valkey-compat-redis-dev (<< 8.0~)
 Provides: redis-dev
 Filename: ./valkey-compat-redis-dev_8.1.6-1.trixie_all.deb
-Size: 20140
-MD5sum: 6207c0d510900f96c4457afabf782391
-SHA1: 37c3998337a8b507a1a660c637ad53cc76a292de
-SHA256: 6803453f4e079f1e2350e6e06e03a6280816a2014bb3ab404c3d4a2b72283178
+Size: 20160
+MD5sum: 4ef8949b885a7ed909e9362f66d4c152
+SHA1: a4d5280e3c5ca02263d422ff65dff6a6002ac1bf
+SHA256: 601c3bdfaff125d174c3826eb7ea77396b951f8d5c2ad4be907b7d8d1d7a8a31
 Section: libdevel
 Priority: optional
 Multi-Arch: foreign
@@ -59,10 +59,10 @@ Installed-Size: 167
 Breaks: valkey-dev (<< 8.0~)
 Replaces: valkey-dev (<< 8.0~)
 Filename: ./valkey-dev_8.1.6-1.trixie_amd64.deb
-Size: 32112
-MD5sum: 6c4bce4dd1cbe7b460ee905213ae9973
-SHA1: 98ef506d1b00b284670ad70d4b9aa421133f1316
-SHA256: cb5e05e32c8276ac30b59e5ad9ed55879afc30ec2d5fac1718095d909b99922a
+Size: 32108
+MD5sum: d5e43c2e61f4fe8259d5cc9312a4356c
+SHA1: c0e4741c17750e05e355615739aac556a955401f
+SHA256: 4a32b77096ead3ebd0efc24f59d556b968b3539a0e7fda785737406cffe59ee8
 Section: libdevel
 Priority: optional
 Multi-Arch: same
@@ -82,10 +82,10 @@ Installed-Size: 7629
 Breaks: valkey-doc (<< 8.0~)
 Replaces: valkey-doc (<< 8.0~)
 Filename: ./valkey-doc_8.1.6-1.trixie_all.deb
-Size: 2000964
-MD5sum: 8e6b1279f12fa7be5a1686443be1558b
-SHA1: 477d489dfff238d76c076329644b7c7a02ed8331
-SHA256: 86e4f58854712e7c28f325f2cb1bbfdea6e097294c26dcea7daf67815ec550e8
+Size: 2000968
+MD5sum: afe277038e629db7bb3db5bcf0d08b61
+SHA1: 3835139d550e035bb18b1aa30e6e513867115365
+SHA256: 4168347d91d4c61cfb5b6871a6fcf5f69075d4164b988638b03104410c3d3b6a
 Section: doc
 Priority: optional
 Multi-Arch: foreign
@@ -106,10 +106,10 @@ Recommends: logrotate
 Breaks: valkey-sentinel (<< 8.0~)
 Replaces: valkey-sentinel (<< 8.0~)
 Filename: ./valkey-sentinel_8.1.6-1.trixie_amd64.deb
-Size: 44864
-MD5sum: cda62073728b7d0860b92f95732e99bf
-SHA1: 32b0ea19f97b91c36ffd9ddef075aba48c2f8bbd
-SHA256: 745d7d784021603c14440126c9fb287129d6764ccce9c7c6b9006dc7cab0154e
+Size: 44868
+MD5sum: 9763770a9a5ec851c391635001f39033
+SHA1: b54e812260e0cdf31ba87adc7dd8dec1185cc862
+SHA256: 8e1427df10006be45c09dca92c5a079308753bf442677ed04234291ee37057a9
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -132,10 +132,10 @@ Breaks: valkey-server (<< 8.0~)
 Replaces: valkey-server (<< 8.0~)
 Provides: valkey
 Filename: ./valkey-server_8.1.6-1.trixie_amd64.deb
-Size: 1086728
-MD5sum: 17ee50d5740d052a732a2cf386d155b8
-SHA1: f75d3d656f37d28bc16ec5833fac2933567b792c
-SHA256: 60aa6ee2c0c174bdebf022d945c36e8b6e701b17a7c8234ad1ac59b02ba652d8
+Size: 1087172
+MD5sum: c63de379f53225a57b70a874a7cde9d3
+SHA1: 220f756e0b639c2db47132c420f14e987093423d
+SHA256: cd0fe13e0b01e5e91b83a0445034cf0a536c3e2bb108780a75adb15d8996ffec
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -171,14 +171,14 @@ Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
 Installed-Size: 4598
 Depends: valkey-server (= 8.1.6-1.trixie)
 Filename: ./valkey-server-dbgsym_8.1.6-1.trixie_amd64.deb
-Size: 3632104
-MD5sum: 283ba21758555add0637cb946a9b0b40
-SHA1: 0e759a7654f6d35da30819c6554ebd0150c98b37
-SHA256: 17674f623dc56e08782f09ea914cc3cd37d187451b9498d5ca890caf5515927e
+Size: 3632096
+MD5sum: f958adf494a608376bc819fc91c48039
+SHA1: c60f1de3ce0040980746df3832fcc49b6c068d00
+SHA256: 03ebc7e5d7a0c5cc8e2f9ec56da31b19b9df5c9ccf4226a8f68390c524070854
 Section: debug
 Priority: optional
 Description: debug symbols for valkey-server
-Build-Ids: c81dbf0698c7abdbaf63499ff031097d6432ba56
+Build-Ids: 2d4299f47fff7310df5e2f1799b3831dbbad3913
 
 Package: valkey-tools
 Source: valkey
@@ -191,10 +191,10 @@ Suggests: ruby-redis
 Breaks: valkey-tools (<< 8.0~)
 Replaces: valkey-tools (<< 8.0~)
 Filename: ./valkey-tools_8.1.6-1.trixie_amd64.deb
-Size: 284768
-MD5sum: 5c4f76de5c9144fe63cf7fd795be2eec
-SHA1: 3fdb21cf10b6df431fd496040b8099e603b8656b
-SHA256: bc5abf982db1b2cb1d402b328369bc52200a63702ef808b554e4fbc2ef173658
+Size: 284948
+MD5sum: 03b7af56d6427957b903575878ae1a1a
+SHA1: df05c2188c43328707b7626008dd1fc8c64b55a0
+SHA256: db57225b98c30c143fedab776f2c1ee2ba0621eb344799d8ee3e235a0ecf6cfd
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -212,12 +212,12 @@ Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
 Installed-Size: 1164
 Depends: valkey-tools (= 8.1.6-1.trixie)
 Filename: ./valkey-tools-dbgsym_8.1.6-1.trixie_amd64.deb
-Size: 811352
-MD5sum: 6cff3d0563f3d49d9aff158fa79d6b2c
-SHA1: 664d2b450a0248ff559467a4e01fc687e3b52405
-SHA256: f6bd37476af8a5cf2914a882421349ef51c3bf2b39061e0eddab3cd5fec825d5
+Size: 811372
+MD5sum: 55719a79fbbe3c27e3520009c30db3f7
+SHA1: b91ab2577bbafa300132e44648ec5d3ed5c4e6f2
+SHA256: a663929bdf9fd84932c59486a7cd7d53fa708e024a43d24c6fc7970849558537
 Section: debug
 Priority: optional
 Description: debug symbols for valkey-tools
-Build-Ids: 98530d3884299f60b044285482a19002cc7b91a8 a804b3224da790c257bd2567d16b9b04fb75c5c4
+Build-Ids: 096217b104fb2a80b71ad7d85ea09490da8af651 69f73665ef0cca053202cd94386a6c67ffbe1fdc
 

@@ -10,10 +10,10 @@ Breaks: valkey-compat-redis (<< 8.0~)
 Replaces: redis-server (<< 7.4~), redis-tools (<< 7.4~), valkey-compat-redis (<< 8.0~)
 Provides: redis-server, redis-tools
 Filename: ./valkey-compat-redis_8.1.6-1.noble_all.deb
-Size: 14304
-MD5sum: 2951aaa217455ae911e4569cf9449a9d
-SHA1: de5d90ccad9c78239803205292c571013d5b99c7
-SHA256: 7685a355b130baadae74f3bba5c482f981dd232756cc5732db1b9a865e343b12
+Size: 14312
+MD5sum: 080cc60d492a51023fbc25baf0f45588
+SHA1: 019dba839923ac1319339f5275b95e08c1b59e0a
+SHA256: 74e853bc201f013d98ef2d3c66e26577c760db561dfa8dc5f5e188d021eb86bc
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -36,10 +36,10 @@ Breaks: valkey-compat-redis-dev (<< 8.0~)
 Replaces: redis-dev (<< 7.4~), valkey-compat-redis-dev (<< 8.0~)
 Provides: redis-dev
 Filename: ./valkey-compat-redis-dev_8.1.6-1.noble_all.deb
-Size: 20140
-MD5sum: f71745a99acf2c2c6b9987e566839a5c
-SHA1: 3a922acb93915e4d7cfc03c05a8db7c58ff3469c
-SHA256: af9b7d9ac9fb87109f7af08f67850969a9ff882044c93b2726cd85010a0067dc
+Size: 20144
+MD5sum: 211aa5a762f8878eda956f8fd5604586
+SHA1: dcea62573174ac386cf0c337935376a94204a394
+SHA256: cda610d0628a7aa735ce57260391203b5ff7f1ec6ba6ec341142862b85167970
 Section: libdevel
 Priority: optional
 Multi-Arch: foreign
@@ -59,10 +59,10 @@ Installed-Size: 167
 Breaks: valkey-dev (<< 8.0~)
 Replaces: valkey-dev (<< 8.0~)
 Filename: ./valkey-dev_8.1.6-1.noble_amd64.deb
-Size: 32084
-MD5sum: 76ac531ca64b78b699a39433c9a2e4f6
-SHA1: ec6aae3dbf5c7b8a1b77d5a21b206641acbeedf6
-SHA256: 3327778635af3e48b22a55c4e467c4a45f3e24dcb7be84e1a0ecc1a17487f0a0
+Size: 32116
+MD5sum: 1bba141a9c1eeb96c00e5091f777289b
+SHA1: 96ff2d59d57777ab829230994dfff5c90b9da7cb
+SHA256: 3c4ea224ebec3c74c4ecd0802dc11238b6b62be7ecdbeb7d55ecf18bcc42c357
 Section: libdevel
 Priority: optional
 Multi-Arch: same
@@ -82,10 +82,10 @@ Installed-Size: 7663
 Breaks: valkey-doc (<< 8.0~)
 Replaces: valkey-doc (<< 8.0~)
 Filename: ./valkey-doc_8.1.6-1.noble_all.deb
-Size: 2051912
-MD5sum: cb8688d1c96f3fd0fef221ee3df462ef
-SHA1: e9aad0b972a9754d47195766179b526f39474c6f
-SHA256: 3ac2b4093cd1347ab972bf76a452da5040071b5088757d928e3b3572285b0256
+Size: 2052020
+MD5sum: 75e64f8f09aa84683e353f77e37e48c4
+SHA1: 31ec19781a0a0297846eed444a029738736a27be
+SHA256: ac3d939d57171e7e2511b64fe6a4506f4b040a86284c5501d977f1d10e41531f
 Section: doc
 Priority: optional
 Multi-Arch: foreign
@@ -106,10 +106,10 @@ Recommends: logrotate
 Breaks: valkey-sentinel (<< 8.0~)
 Replaces: valkey-sentinel (<< 8.0~)
 Filename: ./valkey-sentinel_8.1.6-1.noble_amd64.deb
-Size: 44912
-MD5sum: 88c5a1b24e3424fe1fb8ff5558a4150b
-SHA1: 0d6ba374e005a781799ae6557e63e4535326b029
-SHA256: a918f8e6cfeb6f3ab64110749c7cd6a91340448dc6348e317c26ef623d4e9398
+Size: 44916
+MD5sum: 168a5397facf32e084fe1aff43332220
+SHA1: 177de8db390330090dfc8ecddbed477624555c02
+SHA256: a6ceb8f2424537eccf3c08eb594b62f78050b551fe2dd5c506ec112248ee3267
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -132,10 +132,10 @@ Breaks: valkey-server (<< 8.0~)
 Replaces: valkey-server (<< 8.0~)
 Provides: valkey
 Filename: ./valkey-server_8.1.6-1.noble_amd64.deb
-Size: 1069604
-MD5sum: 34e1a13d07d61a79d6fb852df325e4db
-SHA1: c0a82adf46017fd0bd9041ef1f1337a4941ccd92
-SHA256: abb2b17ed46ae119fe9a2a96345bf541eb64953380880a234b26a33ca42c40b6
+Size: 1069388
+MD5sum: fe68f81c71989dd4f9177fb14a52613a
+SHA1: c9ffa2bd6bb7ee4575fea842f4ac372e93b9dc81
+SHA256: 14d49211d1154ac468b713c5793b08da9d690e34959bef231a765a129684114d
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -173,10 +173,10 @@ Suggests: ruby-redis
 Breaks: valkey-tools (<< 8.0~)
 Replaces: valkey-tools (<< 8.0~)
 Filename: ./valkey-tools_8.1.6-1.noble_amd64.deb
-Size: 282848
-MD5sum: 78979cd55890f3fccaa7cbb2d1e77c72
-SHA1: 2ad73811915d132904695e232c3ad532f794ea3e
-SHA256: 8193bad2103f6d0ec6f9390d31902587a9a68cae48829f2e9ae4bd323dc3e548
+Size: 282728
+MD5sum: ae1b91cff5be99c4bac3754a0c1ee0b3
+SHA1: ff38f2a979f3bc26539ce418f85a60c9a3d63a4d
+SHA256: d118c5d602280ec5de5282f96e419031e4d079be8b14259a6fe426f191722e44
 Section: database
 Priority: optional
 Homepage: https://valkey.io

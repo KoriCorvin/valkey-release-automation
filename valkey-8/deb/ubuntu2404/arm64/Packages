@@ -11,9 +11,9 @@ Replaces: redis-server (<< 7.4~), redis-tools (<< 7.4~), valkey-compat-redis (<<
 Provides: redis-server, redis-tools
 Filename: ./valkey-compat-redis_8.1.6-1.noble_all.deb
 Size: 14308
-MD5sum: 35e183f42416e478c9d5e2e7285fde7f
-SHA1: e57bd9409e862d6b91f6a3557fed80ac3d9358ca
-SHA256: 3684fe6127be4d38dd0985ee2de13525e312919c42db1946b374b8e338b53703
+MD5sum: 4597461626c27102f17b9426dfaad7d3
+SHA1: 08f7b9f655c8424779c80caa9370b12feefa30aa
+SHA256: c3c9cc46244f8ba4a3dab328c2f5b6150e7f3ca694a4a3d47912c47cd0479604
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -36,10 +36,10 @@ Breaks: valkey-compat-redis-dev (<< 8.0~)
 Replaces: redis-dev (<< 7.4~), valkey-compat-redis-dev (<< 8.0~)
 Provides: redis-dev
 Filename: ./valkey-compat-redis-dev_8.1.6-1.noble_all.deb
-Size: 20152
-MD5sum: e03e01494f07b46cfba604409e136c0a
-SHA1: b008f805dfedb773a52eedff9645f63f47d31935
-SHA256: 30b4756d68b428ecf993190ef2838fd56a45ecbae6675b989ff443e9c443c2da
+Size: 20140
+MD5sum: 7d28b1903266657e0c879f0f8089f795
+SHA1: f66f759f939dda8124d2fe49b761717a5acaf63a
+SHA256: 7ac03704bfa260bc3ac69daf7a5d58f58706d32becafc1b07db490f7acc8114d
 Section: libdevel
 Priority: optional
 Multi-Arch: foreign
@@ -59,10 +59,10 @@ Installed-Size: 167
 Breaks: valkey-dev (<< 8.0~)
 Replaces: valkey-dev (<< 8.0~)
 Filename: ./valkey-dev_8.1.6-1.noble_arm64.deb
-Size: 32128
-MD5sum: 88b752b03f6f2ee291a298c6c8d59be6
-SHA1: 19064bfda0a6b57fcd4c539c95d4481eb3755452
-SHA256: 4f65096c66e056efc1c7a5584f3cf0f791d4fa55b6172f1ab9ead046ad6e8ac4
+Size: 32096
+MD5sum: a9eaa0fa3799ee585a925353d79e9536
+SHA1: f8eb1067c413ed82cc33ce7dd45a9c24e0e4f70c
+SHA256: 482e93e46702b23d6a88ed344a89c59c9327bbd4245dac44c7901d3c9527267e
 Section: libdevel
 Priority: optional
 Multi-Arch: same
@@ -82,10 +82,10 @@ Installed-Size: 7663
 Breaks: valkey-doc (<< 8.0~)
 Replaces: valkey-doc (<< 8.0~)
 Filename: ./valkey-doc_8.1.6-1.noble_all.deb
-Size: 2051940
-MD5sum: 1b47f23ccd3d6779e0e7f58c4b993e4a
-SHA1: 6a87ab37647fdfff7bca7cbb82878353e4bcbcaa
-SHA256: 5cc8ecfe3f9eda8194c441d840ef0d7a63486f49f0c7b29d0c7e0cfff9bfc6eb
+Size: 2051972
+MD5sum: 7330a181c5cd529dbf8a08552630316d
+SHA1: 9fc8b06b77803a089b759ac2b3eb81c06b46c878
+SHA256: 3f7bb077d23dddc743e70314187e01137c4a62f59f298c53eb6ee450e296e6d4
 Section: doc
 Priority: optional
 Multi-Arch: foreign
@@ -106,10 +106,10 @@ Recommends: logrotate
 Breaks: valkey-sentinel (<< 8.0~)
 Replaces: valkey-sentinel (<< 8.0~)
 Filename: ./valkey-sentinel_8.1.6-1.noble_arm64.deb
-Size: 44924
-MD5sum: 9cdab017c10eaf1ecf73e72bd79d1257
-SHA1: 0efb55e8a5753fe992803a76e318995890ddeb30
-SHA256: f919a0f6cdd6e7b18d942a55f4bd8f013aa359f4f5510204163b20bd430816d0
+Size: 44916
+MD5sum: f3e4bfe5edb9d69f89895df8f37f3767
+SHA1: c27bd5edb01f9c8860cb6e3b93686880a2d287b2
+SHA256: 8fd0e35b55443a4cf2cb6605174a5004d71f07651aa2323d343347f5158cb5c5
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -132,10 +132,10 @@ Breaks: valkey-server (<< 8.0~)
 Replaces: valkey-server (<< 8.0~)
 Provides: valkey
 Filename: ./valkey-server_8.1.6-1.noble_arm64.deb
-Size: 998780
-MD5sum: 41f7dd492f76851c9aa94209d2c87d71
-SHA1: 8bd697be4be2d851373fcfccf5e74f364b033281
-SHA256: fc3bfa8f6bc27bb54b953055969148318d599cf202539cb5f89d67a5f8c8a141
+Size: 999192
+MD5sum: bd622b21d321d25d8494e618dcd2a158
+SHA1: 0c5f8fcd64c4c65e939477ca22d46bd4fc46a0ef
+SHA256: 1cbe00830f54f450f852e3cbdf607b3365cdbf6ff88564e12c2860b19add9fd1
 Section: database
 Priority: optional
 Homepage: https://valkey.io
@@ -173,10 +173,10 @@ Suggests: ruby-redis
 Breaks: valkey-tools (<< 8.0~)
 Replaces: valkey-tools (<< 8.0~)
 Filename: ./valkey-tools_8.1.6-1.noble_arm64.deb
-Size: 268700
-MD5sum: f4f126ef5ddf36c6e83fa10166295f71
-SHA1: cb8225329622f6fb9c83625e446a7a97768fd292
-SHA256: 3ad4fa49b45f88b74f747e87a88c116f4db20277f6d90f3d695d2b25f0ca68fb
+Size: 269256
+MD5sum: ea01e3ecbd9766b7c4ab97cff326f97f
+SHA1: 74192d5a07624d46a27751289ef602a0f600cbc4
+SHA256: c6603b8f279301a9d48299c6f9ce248e0ad94cdd2cebfc9116c6dca535bb8818
 Section: database
 Priority: optional
 Homepage: https://valkey.io
