@@ -163,6 +163,7 @@ jobs:
             -v "${{ github.workspace }}/scripts:/scripts:ro" \
             -v "${{ github.workspace }}/packaging/common/rpm:/packaging-common:ro" \
             -v "${{ github.workspace }}/packaging/${{ needs.process-inputs.outputs.packaging_dir }}/rpm:/packaging-override:ro" \
+            -v "${{ github.workspace }}/packaging/templates/rpm:/packaging-templates:ro" \
             -v "$(pwd)/output:/output" \
             ${{ matrix.platform.container }} \
             bash /scripts/build-rpm.sh
@@ -244,6 +245,7 @@ jobs:
             -v "${{ github.workspace }}/scripts:/scripts:ro" \
             -v "${{ github.workspace }}/packaging/common/debian:/packaging-common:ro" \
             -v "${{ github.workspace }}/packaging/${{ needs.process-inputs.outputs.packaging_dir }}/debian:/packaging-override:ro" \
+            -v "${{ github.workspace }}/packaging/templates/debian:/packaging-templates:ro" \
             -v "$(pwd)/output:/output" \
             ${{ matrix.platform.container }} \
             bash /scripts/build-deb.sh

@@ -10,7 +10,7 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all optimize=+lto
 export DEB_CFLAGS_MAINT_APPEND = -I/usr/include/liblzf
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,-no-as-needed -ldl -latomic -llzf
 
-VALKEY_DOC_VERSION = 9.0.0
+VALKEY_DOC_VERSION = @@DOC_VERSION@@
 
 # Build jemalloc in parallel
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))

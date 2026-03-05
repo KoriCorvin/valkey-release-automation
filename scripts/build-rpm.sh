@@ -93,6 +93,16 @@ cp -r /packaging-common/* /packaging/
 cp -r /packaging-override/* /packaging/
 PACKAGING_DIR="/packaging"
 
+# Generate files from templates if templates are mounted
+if [ -d "/packaging-templates" ]; then
+  echo "Processing RPM templates..."
+  bash /scripts/generate-from-templates.sh \
+    --type rpm \
+    --version "${VALKEY_VERSION}" \
+    --templates-dir /packaging-templates \
+    --output-dir "$PACKAGING_DIR"
+fi
+
 # Verify packaging files are mounted
 if [ ! -d "$PACKAGING_DIR" ]; then
   echo "ERROR: Packaging directory not found at $PACKAGING_DIR!"

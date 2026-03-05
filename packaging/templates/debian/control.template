@@ -36,9 +36,9 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends}
 Replaces:
- valkey-server (<< 8.0~)
+ valkey-server (<< @@MAJOR_VERSION@@.0~)
 Breaks:
- valkey-server (<< 8.0~)
+ valkey-server (<< @@MAJOR_VERSION@@.0~)
 Recommends:
  logrotate
 Suggests:
@@ -77,9 +77,9 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends}
 Replaces:
- valkey-sentinel (<< 8.0~)
+ valkey-sentinel (<< @@MAJOR_VERSION@@.0~)
 Breaks:
- valkey-sentinel (<< 8.0~)
+ valkey-sentinel (<< @@MAJOR_VERSION@@.0~)
 Recommends:
  logrotate
 Description: Persistent key-value database with network interface (monitoring)
@@ -94,9 +94,9 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends}
 Replaces:
- valkey-tools (<< 8.0~)
+ valkey-tools (<< @@MAJOR_VERSION@@.0~)
 Breaks:
- valkey-tools (<< 8.0~)
+ valkey-tools (<< @@MAJOR_VERSION@@.0~)
 Suggests:
  ruby-redis
 Description: Persistent key-value database with network interface (client)
@@ -111,9 +111,9 @@ Multi-Arch: same
 Depends:
  ${misc:Depends}
 Replaces:
- valkey-dev (<< 8.0~)
+ valkey-dev (<< @@MAJOR_VERSION@@.0~)
 Breaks:
- valkey-dev (<< 8.0~)
+ valkey-dev (<< @@MAJOR_VERSION@@.0~)
 Description: Development files for Valkey modules
  Valkey is an advanced key-value store.
  .
@@ -127,11 +127,11 @@ Depends:
  valkey-tools (>= ${source:Version}),
  ${misc:Depends}
 Replaces:
- valkey-compat-redis (<< 8.0~),
+ valkey-compat-redis (<< @@MAJOR_VERSION@@.0~),
  redis-server (<< 7.4~),
  redis-tools (<< 7.4~)
 Breaks:
- valkey-compat-redis (<< 8.0~)
+ valkey-compat-redis (<< @@MAJOR_VERSION@@.0~)
 Conflicts:
  redis-server (<< 7.4~),
  redis-tools (<< 7.4~)
@@ -153,10 +153,10 @@ Depends:
  valkey-dev (>= ${source:Version}),
  ${misc:Depends}
 Replaces:
- valkey-compat-redis-dev (<< 8.0~),
+ valkey-compat-redis-dev (<< @@MAJOR_VERSION@@.0~),
  redis-dev (<< 7.4~)
 Breaks:
- valkey-compat-redis-dev (<< 8.0~)
+ valkey-compat-redis-dev (<< @@MAJOR_VERSION@@.0~)
 Conflicts:
  redis-dev (<< 7.4~)
 Provides:
@@ -174,9 +174,9 @@ Multi-Arch: foreign
 Depends:
  ${misc:Depends}
 Replaces:
- valkey-doc (<< 8.0~)
+ valkey-doc (<< @@MAJOR_VERSION@@.0~)
 Breaks:
- valkey-doc (<< 8.0~)
+ valkey-doc (<< @@MAJOR_VERSION@@.0~)
 Build-Profiles: <!nodoc>
 Description: Documentation for Valkey
  Valkey is an advanced key-value store.
