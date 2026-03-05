@@ -1,0 +1,13 @@
+Archive: stable
+Component: main
+Architecture: arm64
+Date: Thu, 05 Mar 2026 20:27:50 +0000
+MD5Sum:
+ 3a16b545715ed21aac45c6c092548069             5845 Packages
+ c2a4581bec239790dd4a6e091dd14f7a             2137 Packages.gz
+SHA1:
+ 22e98e521ba3ec42fadf83b5a2b981082e76005b             5845 Packages
+ 23fa6bb70c00a3299fc95d875b4317e367a8048f             2137 Packages.gz
+SHA256:
+ 92a550569ffc609bdc16a1f573fe109582a41e34e717632fd98aa19ff847f758             5845 Packages
+ e902884ba5c7b0d2d47ef16113e94bf33d0b05e6883ec4862b79061f8c411a27             2137 Packages.gz

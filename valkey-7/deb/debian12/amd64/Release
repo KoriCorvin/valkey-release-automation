@@ -1,0 +1,13 @@
+Archive: stable
+Component: main
+Architecture: amd64
+Date: Thu, 05 Mar 2026 20:27:49 +0000
+MD5Sum:
+ ff8af68c4ea1fc6786b9eaff9851f166             7147 Packages
+ 908400f2e78ceb2f90994c2778830fab             2505 Packages.gz
+SHA1:
+ a81b53f9294f7a6d5cb91e2524806adf532f5d58             7147 Packages
+ 6203e0b113adc77a1700ba276e8e790d86b6e618             2505 Packages.gz
+SHA256:
+ 05a9e454e30c6b536d014ebc2918ce50619a21207d860d0b03bc4cd9386567ed             7147 Packages
+ 32ff8e601125196dfe7ed48d9c34363e0f6eeae3f68bcf1b56fa75f6ff4e3d51             2505 Packages.gz
