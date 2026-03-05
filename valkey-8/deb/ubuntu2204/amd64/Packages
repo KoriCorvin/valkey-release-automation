@@ -1,0 +1,187 @@
+Package: valkey-compat-redis
+Source: valkey
+Version: 8.1.6-1.jammy
+Architecture: all
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 42
+Depends: valkey-server (>= 8.1.6-1.jammy), valkey-tools (>= 8.1.6-1.jammy)
+Conflicts: redis-server (<< 7.4~), redis-tools (<< 7.4~)
+Breaks: valkey-compat-redis (<< 8.0~)
+Replaces: redis-server (<< 7.4~), redis-tools (<< 7.4~), valkey-compat-redis (<< 8.0~)
+Provides: redis-server, redis-tools
+Filename: ./valkey-compat-redis_8.1.6-1.jammy_all.deb
+Size: 14304
+MD5sum: d6face5dfd683a2f63255fe0ad13f3e4
+SHA1: e8104e0947d4aef59f89f855c7ced8db97951a54
+SHA256: c57f2d13626bf6e8b624c5fdf3126c6814a8556d8939864c1929871d5d7a24f8
+Section: database
+Priority: optional
+Homepage: https://valkey.io
+Description: Redis compatibility symlinks for Valkey
+ This package provides compatibility symlinks and wrappers to enable
+ easy conversion from Redis to Valkey. It provides redis-* command names
+ that redirect to the equivalent valkey-* commands.
+ .
+ This is a transitional package to help migrate from Redis to Valkey.
+
+Package: valkey-compat-redis-dev
+Source: valkey
+Version: 8.1.6-1.jammy
+Architecture: all
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 80
+Depends: valkey-dev (>= 8.1.6-1.jammy)
+Conflicts: redis-dev (<< 7.4~)
+Breaks: valkey-compat-redis-dev (<< 8.0~)
+Replaces: redis-dev (<< 7.4~), valkey-compat-redis-dev (<< 8.0~)
+Provides: redis-dev
+Filename: ./valkey-compat-redis-dev_8.1.6-1.jammy_all.deb
+Size: 20140
+MD5sum: d840f31f47300c5e75dbce12f6b4a2f3
+SHA1: 12061de57b8e36c6f6ce98ba1b1dc96a92aac0af
+SHA256: 1ffb45d206b583edfde0c396e267e4d832b051b83e384c07952c197eb7678734
+Section: libdevel
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://valkey.io
+Description: Redis API compatibility headers for Valkey modules
+ This package provides the legacy redismodule.h header for building
+ Valkey modules with the Redis API.
+ .
+ This is a transitional package to help migrate Redis modules to Valkey.
+
+Package: valkey-dev
+Source: valkey
+Version: 8.1.6-1.jammy
+Architecture: amd64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 167
+Breaks: valkey-dev (<< 8.0~)
+Replaces: valkey-dev (<< 8.0~)
+Filename: ./valkey-dev_8.1.6-1.jammy_amd64.deb
+Size: 32096
+MD5sum: 471f0d1bd317795abe7f922a00b732b8
+SHA1: 400d5f4d97096a79b5abb58d7229aabbda41bac8
+SHA256: 51a88671bb1250d1b188f0d4733027d1f7bf4a75e9c166aaf485e3391dfd5265
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Homepage: https://valkey.io
+Description: Development files for Valkey modules
+ Valkey is an advanced key-value store.
+ .
+ This package contains the header files needed to develop Valkey modules.
+ Includes valkeymodule.h and RPM macros for module packaging.
+
+Package: valkey-doc
+Source: valkey
+Version: 8.1.6-1.jammy
+Architecture: all
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 6234
+Breaks: valkey-doc (<< 8.0~)
+Replaces: valkey-doc (<< 8.0~)
+Filename: ./valkey-doc_8.1.6-1.jammy_all.deb
+Size: 1972260
+MD5sum: cd67bae3d31a2ec315ab664a2f51b5a0
+SHA1: 268319401b22d74a7cf965c246410e055b377bb2
+SHA256: 75f32b7b6fae5ea735778098b1bd1cac01424234420cca02e21fea74849d3ce9
+Section: doc
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://valkey.io
+Description: Documentation for Valkey
+ Valkey is an advanced key-value store.
+ .
+ This package contains the documentation and additional man pages.
+
+Package: valkey-sentinel
+Source: valkey
+Version: 8.1.6-1.jammy
+Architecture: amd64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 93
+Depends: valkey-tools (= 8.1.6-1.jammy), lsb-base (>= 3.2-14)
+Recommends: logrotate
+Breaks: valkey-sentinel (<< 8.0~)
+Replaces: valkey-sentinel (<< 8.0~)
+Filename: ./valkey-sentinel_8.1.6-1.jammy_amd64.deb
+Size: 44820
+MD5sum: 483d07c17bbc6035d0e1e1f30d4f930d
+SHA1: 23b5024535a183b4bc28dab3abf375924014f1d4
+SHA256: a815669f39416d9be600bfb12af0fa3c8a870d2aef13dac35adc21c67676f6af
+Section: database
+Priority: optional
+Homepage: https://valkey.io
+Description: Persistent key-value database with network interface (monitoring)
+ Valkey is an advanced key-value store.
+ .
+ This package contains the Valkey Sentinel monitoring software.
+
+Package: valkey-server
+Source: valkey
+Version: 8.1.6-1.jammy
+Architecture: amd64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 3151
+Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: valkey-tools (= 8.1.6-1.jammy), lsb-base (>= 3.2-14), libatomic1 (>= 4.8), libc6 (>= 2.34), libjemalloc2 (>= 4.0.0), liblzf1 (>= 1.5), libssl3 (>= 3.0.0~~alpha1), libsystemd0
+Recommends: logrotate
+Suggests: valkey-doc, valkey-compat-redis
+Breaks: valkey-server (<< 8.0~)
+Replaces: valkey-server (<< 8.0~)
+Provides: valkey
+Filename: ./valkey-server_8.1.6-1.jammy_amd64.deb
+Size: 1068820
+MD5sum: d0243171640be1d215f4cf3aa6448045
+SHA1: 41a74fc15026419aeea08d63e1874037ee0205bb
+SHA256: c625a64e85e3f6bc4ed7180e9160d1405471b2cc6c70479505eb6f59ef20459a
+Section: database
+Priority: optional
+Homepage: https://valkey.io
+Description: Persistent key-value database with network interface
+ Valkey is an advanced key-value store. It is often referred to as a data
+ structure server since keys can contain strings, hashes, lists, sets and
+ sorted sets.
+ .
+ You can run atomic operations on these types, like appending to a string;
+ incrementing the value in a hash; pushing to a list; computing set
+ intersection, union and difference; or getting the member with highest
+ ranking in a sorted set.
+ .
+ In order to achieve its outstanding performance, Valkey works with an
+ in-memory dataset. Depending on your use case, you can persist it either
+ by dumping the dataset to disk every once in a while, or by appending
+ each command to a log.
+ .
+ Valkey also supports trivial-to-setup primary-replica replication, with very
+ fast non-blocking first synchronization, auto-reconnection on net split
+ and so forth.
+ .
+ Other features include Transactions, Pub/Sub, Lua scripting, Keys with a
+ limited time-to-live, and configuration settings to make Valkey behave like
+ a cache.
+
+Package: valkey-tools
+Source: valkey
+Version: 8.1.6-1.jammy
+Architecture: amd64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 969
+Depends: adduser, libatomic1 (>= 4.8), libc6 (>= 2.34), libjemalloc2 (>= 4.0.0), liblzf1 (>= 1.5), libssl3 (>= 3.0.0~~alpha1), libsystemd0
+Suggests: ruby-redis
+Breaks: valkey-tools (<< 8.0~)
+Replaces: valkey-tools (<< 8.0~)
+Filename: ./valkey-tools_8.1.6-1.jammy_amd64.deb
+Size: 283112
+MD5sum: 4d2cb765f4c27a5ca710b247a64cbf51
+SHA1: a5b6acd3e26c5ae6cc0dc2980a816ca8c9debc1a
+SHA256: 4d6c099cd938fac9acdd528aa957fd8db55de57865c4ad581fc9c0921cff0e48
+Section: database
+Priority: optional
+Homepage: https://valkey.io
+Description: Persistent key-value database with network interface (client)
+ Valkey is an advanced key-value store.
+ .
+ This package contains the command line client and other tools.
+
