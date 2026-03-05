@@ -1223,11 +1223,62 @@ jobs:
           exit $TEST_EXIT
 
   ############################################################################
+  # Publish Package Repositories to GitHub Pages
+  ############################################################################
+  publish-repos:
+    name: Publish Repos
+    needs: [process-inputs, build-rpm, build-deb, test-rpm, test-deb]
+    runs-on: ubuntu-latest
+    if: success()
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create site directory
+        run: mkdir -p site
+
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Install repository tools
+        run: sudo apt-get update && sudo apt-get install -y createrepo-c dpkg-dev gpg
+
+      - name: Import GPG signing key
+        uses: crazy-max/ghaction-import-gpg@v6
+        id: gpg
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+
+      - name: Build repos and generate site
+        run: |
+          PAGES_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          bash scripts/publish-repos.sh \
+            "${{ needs.process-inputs.outputs.version }}" \
+            "${{ steps.gpg.outputs.fingerprint }}" \
+            "${PAGES_URL}" \
+            artifacts \
+            site \
+            scripts/pages
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
+          keep_files: true
+
+  ############################################################################
   # Combined Summary
   ############################################################################
   build-summary:
     name: Build Summary
-    needs: [process-inputs, build-rpm, build-deb, test-rpm, test-deb]
+    needs: [process-inputs, build-rpm, build-deb, test-rpm, test-deb, publish-repos]
     runs-on: ubuntu-latest
     if: always()
 
@@ -1241,6 +1292,7 @@ jobs:
           DEB_RESULT="${{ needs.build-deb.result }}"
           RPM_TEST_RESULT="${{ needs.test-rpm.result }}"
           DEB_TEST_RESULT="${{ needs.test-deb.result }}"
+          PUBLISH_RESULT="${{ needs.publish-repos.result }}"
 
           echo "### Builds" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
@@ -1278,9 +1330,21 @@ jobs:
           fi
 
           echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Repository Publishing" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ "$PUBLISH_RESULT" = "success" ]; then
+            echo "- :white_check_mark: Package repositories published to GitHub Pages" >> $GITHUB_STEP_SUMMARY
+          elif [ "$PUBLISH_RESULT" = "skipped" ]; then
+            echo "- :warning: Repository publishing was skipped" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- :x: Repository publishing failed (status: $PUBLISH_RESULT)" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
 
           FAILED=false
-          for result in "$RPM_RESULT" "$DEB_RESULT" "$RPM_TEST_RESULT" "$DEB_TEST_RESULT"; do
+          for result in "$RPM_RESULT" "$DEB_RESULT" "$RPM_TEST_RESULT" "$DEB_TEST_RESULT" "$PUBLISH_RESULT"; do
             if [ "$result" != "success" ] && [ "$result" != "skipped" ]; then
               FAILED=true
             fi
@@ -1336,3 +1400,6 @@ jobs:
 
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Artifacts are available for download in the Actions tab." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          PAGES_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          echo ":globe_with_meridians: **Package repository:** [${PAGES_URL}](${PAGES_URL})" >> $GITHUB_STEP_SUMMARY
