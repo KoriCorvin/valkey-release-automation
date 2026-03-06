@@ -1,0 +1,191 @@
+Package: valkey-compat-redis
+Source: valkey
+Version: 7.2.12-1.bookworm
+Architecture: all
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 39
+Depends: valkey-server (>= 7.2.12-1.bookworm), valkey-tools (>= 7.2.12-1.bookworm)
+Conflicts: redis-server (<< 7.4~), redis-tools (<< 7.4~)
+Replaces: redis-server (<< 7.4~), redis-tools (<< 7.4~)
+Provides: redis-server, redis-tools
+Filename: ./valkey-compat-redis_7.2.12-1.bookworm_all.deb
+Size: 11348
+MD5sum: 99885c1a19400997a3aae19b238d30e4
+SHA1: 26fbd22024f9c1fdd527506def3a90e848643c9a
+SHA256: 5e396cf8edd4b48e28bbf96b69ac4cc5aa9b6f9f0fa17460ea925557ec51778a
+Section: database
+Priority: optional
+Homepage: https://valkey.io
+Description: Redis compatibility symlinks for Valkey
+ This package provides compatibility symlinks and wrappers to enable
+ easy conversion from Redis to Valkey. It provides redis-* command names
+ that redirect to the equivalent valkey-* commands.
+ .
+ This is a transitional package to help migrate from Redis to Valkey.
+
+Package: valkey-compat-redis-dev
+Source: valkey
+Version: 7.2.12-1.bookworm
+Architecture: all
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 77
+Depends: valkey-dev (>= 7.2.12-1.bookworm)
+Conflicts: redis-dev (<< 7.4~)
+Replaces: redis-dev (<< 7.4~)
+Provides: redis-dev
+Filename: ./valkey-compat-redis-dev_7.2.12-1.bookworm_all.deb
+Size: 17172
+MD5sum: e485aee6ad7803a58fa39b52a5a0371b
+SHA1: 0ac407dea526ea8db6efecfa223772550ad17a56
+SHA256: d161ac43cfdfbeb4806f4d9628b185f5c080209f791570651c589b28ec5838c7
+Section: libdevel
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://valkey.io
+Description: Redis API compatibility headers for Valkey modules
+ This package provides the legacy redismodule.h header for building
+ Valkey modules with the Redis API.
+ .
+ This is a transitional package to help migrate Redis modules to Valkey.
+
+Package: valkey-dev
+Source: valkey
+Version: 7.2.12-1.bookworm
+Architecture: arm64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 132
+Filename: ./valkey-dev_7.2.12-1.bookworm_arm64.deb
+Size: 26080
+MD5sum: c5a69478c56adf84ba992e04b3b3b551
+SHA1: 10d3da7ca7685f5236b4ef4ed593a7d8578c98d7
+SHA256: 855a0126f28426fec0fd00563aefae92aaee39af2cae1e2bd85f2e96dfe8db1e
+Section: libdevel
+Priority: optional
+Multi-Arch: same
+Homepage: https://valkey.io
+Description: Development files for Valkey modules
+ Valkey is an advanced key-value store.
+ .
+ This package contains the header files needed to develop Valkey modules.
+ Includes valkeymodule.h and RPM macros for module packaging.
+
+Package: valkey-sentinel
+Source: valkey
+Version: 7.2.12-1.bookworm
+Architecture: arm64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 65
+Depends: valkey-tools (= 7.2.12-1.bookworm), lsb-base (>= 3.2-14)
+Recommends: logrotate
+Filename: ./valkey-sentinel_7.2.12-1.bookworm_arm64.deb
+Size: 18152
+MD5sum: a721086de58d055e109dee803aa48669
+SHA1: 18a15036dd1fa3c50031ebf136fcf88fa2900541
+SHA256: b108b0dfd582e3cf0b38d5345a2277ced936e935704c628bacadd7e58ccd7062
+Section: database
+Priority: optional
+Homepage: https://valkey.io
+Description: Persistent key-value database with network interface (monitoring)
+ Valkey is an advanced key-value store.
+ .
+ This package contains the Valkey Sentinel monitoring software.
+
+Package: valkey-server
+Source: valkey
+Version: 7.2.12-1.bookworm
+Architecture: arm64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 2860
+Pre-Depends: init-system-helpers (>= 1.54~)
+Depends: valkey-tools (= 7.2.12-1.bookworm), lsb-base (>= 3.2-14), libatomic1 (>= 4.8), libc6 (>= 2.34), libjemalloc2 (>= 3.5.0), liblzf1 (>= 1.5), libssl3 (>= 3.0.0), libsystemd0
+Recommends: logrotate
+Suggests: valkey-compat-redis
+Provides: valkey
+Filename: ./valkey-server_7.2.12-1.bookworm_arm64.deb
+Size: 885544
+MD5sum: a672f0b14d3110a07fd410adedd661cc
+SHA1: 3658fceb1f2df0847e47322949a7e3255f32b954
+SHA256: 16c7ae3b30f0a5f3e846443f7d456849d73e3f294f63be1c2dcda0b3352ca25a
+Section: database
+Priority: optional
+Homepage: https://valkey.io
+Description: Persistent key-value database with network interface
+ Valkey is an advanced key-value store. It is often referred to as a data
+ structure server since keys can contain strings, hashes, lists, sets and
+ sorted sets.
+ .
+ You can run atomic operations on these types, like appending to a string;
+ incrementing the value in a hash; pushing to a list; computing set
+ intersection, union and difference; or getting the member with highest
+ ranking in a sorted set.
+ .
+ In order to achieve its outstanding performance, Valkey works with an
+ in-memory dataset. Depending on your use case, you can persist it either
+ by dumping the dataset to disk every once in a while, or by appending
+ each command to a log.
+ .
+ Valkey also supports trivial-to-setup primary-replica replication, with very
+ fast non-blocking first synchronization, auto-reconnection on net split
+ and so forth.
+ .
+ Other features include Transactions, Pub/Sub, Lua scripting, Keys with a
+ limited time-to-live, and configuration settings to make Valkey behave like
+ a cache.
+
+Package: valkey-server-dbgsym
+Source: valkey
+Version: 7.2.12-1.bookworm
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 3574
+Depends: valkey-server (= 7.2.12-1.bookworm)
+Filename: ./valkey-server-dbgsym_7.2.12-1.bookworm_arm64.deb
+Size: 3160220
+MD5sum: e03bf04367cfd21e52c9bf4977229fa4
+SHA1: 535bc558b0db30cf82bee48dcd9b44c2025ca81a
+SHA256: 60cdd31b4aad9b385e7dc44bab8713a92a834439efad8308fa5abab264e14b20
+Section: debug
+Priority: optional
+Description: debug symbols for valkey-server
+Build-Ids: e71cbe6cb35f39ee4ff4603f0c4a904e4a95a9e6
+
+Package: valkey-tools
+Source: valkey
+Version: 7.2.12-1.bookworm
+Architecture: arm64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 1568
+Depends: adduser, libatomic1 (>= 4.8), libc6 (>= 2.34), libjemalloc2 (>= 2.1.1), liblzf1 (>= 1.5), libssl3 (>= 3.0.0), libsystemd0
+Suggests: ruby-redis
+Filename: ./valkey-tools_7.2.12-1.bookworm_arm64.deb
+Size: 252400
+MD5sum: 2f0d075d345bc568d43325b67f8915c3
+SHA1: 24ce0d2cb702aee920186b1a8b47bead74b1675f
+SHA256: dbf020606f8b420df6ed39617231e949b0fdb52daede2b48e303550929834c6b
+Section: database
+Priority: optional
+Homepage: https://valkey.io
+Description: Persistent key-value database with network interface (client)
+ Valkey is an advanced key-value store.
+ .
+ This package contains the command line client and other tools.
+
+Package: valkey-tools-dbgsym
+Source: valkey
+Version: 7.2.12-1.bookworm
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Evgeniy Patlan <evgeniy.patlan@percona.com>
+Installed-Size: 928
+Depends: valkey-tools (= 7.2.12-1.bookworm)
+Filename: ./valkey-tools-dbgsym_7.2.12-1.bookworm_arm64.deb
+Size: 765840
+MD5sum: e9d72fc45ea65e1cd70c4e605258d7c3
+SHA1: 9960c965ca9606eb76912b160ea11d82f25ab3ae
+SHA256: 5f833b2f5f6a5aabffc43e9498b67377677d6a61fc1c3356edd3ad107ca755db
+Section: debug
+Priority: optional
+Description: debug symbols for valkey-tools
+Build-Ids: 0a8c85265e9c35e8ce0504800485706841379371 89787698fe3fb88a574df7cb5cdd602175996a9c
+
