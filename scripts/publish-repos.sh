@@ -18,6 +18,12 @@ echo "Publishing repos: version=${VERSION}, major=${MAJOR}, repo=${REPO_NAME}"
 ################################################################################
 # Build RPM repositories
 ################################################################################
+
+# Import GPG key into RPM database (needed for rpmsign)
+echo "Importing GPG key into RPM database..."
+gpg --armor --export "$GPG_KEY" > /tmp/gpg-key-valkey.asc
+rpm --import /tmp/gpg-key-valkey.asc
+
 for dir in "${ARTIFACTS_DIR}"/valkey-rpms-*/; do
   [ -d "$dir" ] || continue
   artifact=$(basename "$dir" | sed 's/valkey-rpms-//')
@@ -28,6 +34,16 @@ for dir in "${ARTIFACTS_DIR}"/valkey-rpms-*/; do
   echo "=== RPM repo: ${REPO_NAME}/${platform}/${arch} ==="
   mkdir -p "$dest"
   cp "$dir"/*.rpm "$dest/" 2>/dev/null || true
+
+  # Sign individual RPM packages (required for gpgcheck=1)
+  echo "  Signing RPM packages..."
+  for rpm_file in "$dest"/*.rpm; do
+    [ -f "$rpm_file" ] || continue
+    rpmsign --define "%_gpg_name ${GPG_KEY}" \
+            --define "%__gpg /usr/bin/gpg" \
+            --define "%_gpg_digest_algo sha256" \
+            --addsign "$rpm_file"
+  done
 
   createrepo_c --update "$dest"
 
@@ -78,6 +94,13 @@ for dir in "${ARTIFACTS_DIR}"/valkey-debs-*/; do
   echo "=== DEB repo: ${REPO_NAME}/${platform}/${arch} ==="
   mkdir -p "$dest"
   cp "$dir"/*.deb "$dest/" 2>/dev/null || true
+
+  # Sign individual DEB packages
+  echo "  Signing DEB packages..."
+  for deb_file in "$dest"/*.deb; do
+    [ -f "$deb_file" ] || continue
+    debsigs --sign=origin --default-key="${GPG_KEY}" "$deb_file"
+  done
 
   cd "$dest"
   dpkg-scanpackages --arch "$arch" . > Packages

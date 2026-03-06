@@ -34,6 +34,12 @@ MINOR_PART="${VERSION#*.}"
 MINOR="${MINOR_PART%%.*}"
 DOC_VERSION="${MAJOR_VERSION}.${MINOR}.0"
 
+# Templates are only for major version >= 8 (7.x maintains files directly)
+if [ "$MAJOR_VERSION" -lt 8 ]; then
+  echo "Skipping template generation for major version ${MAJOR_VERSION} (templates are for 8.x+ only)"
+  exit 0
+fi
+
 echo "Generating ${TYPE} files for Valkey ${VERSION} (major=${MAJOR_VERSION}, doc=${DOC_VERSION})"
 
 if [ "$TYPE" = "deb" ]; then

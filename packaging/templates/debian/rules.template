@@ -35,9 +35,11 @@ ifeq (,$(filter nodoc,$(DEB_BUILD_PROFILES)))
 	# Download and build valkey-doc if not present
 	if [ ! -d valkey-doc-$(VALKEY_DOC_VERSION) ]; then \
 		if [ ! -f valkey-doc-$(VALKEY_DOC_VERSION).tar.gz ]; then \
-			wget -q https://github.com/valkey-io/valkey-doc/archive/$(VALKEY_DOC_VERSION)/valkey-doc-$(VALKEY_DOC_VERSION).tar.gz; \
+			wget -q https://github.com/valkey-io/valkey-doc/archive/$(VALKEY_DOC_VERSION)/valkey-doc-$(VALKEY_DOC_VERSION).tar.gz || true; \
 		fi; \
-		tar xzf valkey-doc-$(VALKEY_DOC_VERSION).tar.gz; \
+		if [ -f valkey-doc-$(VALKEY_DOC_VERSION).tar.gz ]; then \
+			tar xzf valkey-doc-$(VALKEY_DOC_VERSION).tar.gz; \
+		fi; \
 	fi
 	if [ -d valkey-doc-$(VALKEY_DOC_VERSION) ]; then \
 		$(MAKE) -C valkey-doc-$(VALKEY_DOC_VERSION) VALKEY_ROOT=$(CURDIR) || true; \
